@@ -11,7 +11,11 @@ gulp.task('build', function () {
         .pipe(gulp.dest('dist'));
 });
 
-gulp.task('watch', ['build'], function () {
+gulp.task('copyFile', ['build'], function () {
+    return gulp.src(['./src/index.html']).pipe(gulp.dest('./dist/'));
+});
+
+gulp.task('watch', ['build', 'copyFile'], function () {
     gulp.watch('*.jsx', ['build']);
 });
 
