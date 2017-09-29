@@ -6,8 +6,13 @@ const exampleStyle = {
 };
 
 class ExampleStyle extends React.Component {
+    constructor(props) {
+        super(props);
+        this.name = 'Example styling...';
+    }
+
     render() {
-        return <span style= {exampleStyle}>Example apply styles</span>;
+        return <span style= {exampleStyle} className="c-link" >{this.name}</span>;
     }
 }
 
