@@ -6,8 +6,8 @@ const exampleStyle = {
 };
 
 class ExampleStyle extends React.Component {
-    constructor(props) {
-        super(props);
+    constructor() {
+        super();
         this.name = 'Example styling...';
     }
 
